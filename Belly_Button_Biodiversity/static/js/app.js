@@ -50,7 +50,7 @@ function buildMetadata(sample) {
       marker: {
         size: mSize,
         color: mClrs
-      }
+      };
     };
 
     var data = [trace_bubble];
@@ -62,6 +62,9 @@ function buildMetadata(sample) {
     Plotly.newPlot('bubble', data, layout);
 
   })
+};
+
+
   
       // @TODO: Build a Pie Chart
       // HINT: You will need to use slice() to grab the top 10 sample_values,
@@ -86,7 +89,7 @@ function buildMetadata(sample) {
     Plotly.newPlot('pie', data);
 });
   
-} 
+}
     
   function init() {
     // Grab a reference to the dropdown select element
