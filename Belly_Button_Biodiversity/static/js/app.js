@@ -50,7 +50,7 @@ function buildMetadata(sample) {
       marker: {
         size: mSize,
         color: mClrs
-      };
+      }
     };
 
     var data = [trace_bubble];
@@ -61,7 +61,7 @@ function buildMetadata(sample) {
 
     Plotly.newPlot('bubble', data, layout);
 
-  })
+  });
 };
 
 
@@ -74,7 +74,7 @@ function buildMetadata(sample) {
       //* Use `otu_ids` as the labels for the pie chart
       //* Use `otu_labels` as the hovertext for the chart
 
-  d3.json(url).then(function(data) {
+  d3.json("pie").then(function(data) {
     var pvalue = data.sample_values.slice(0,10);
     var plabel = data.otu_ids.slice(0, 10);
     var phovertext = data.otu_labels.slice(0, 10);
@@ -86,10 +86,15 @@ function buildMetadata(sample) {
       type: 'pie'
     }];
 
-    Plotly.newPlot('pie', data);
+    var layout = {
+      title: 'Belly Button Biodiversity Pie Chart',
+    };
+  
+
+    Plotly.newPlot('pie', data, layout);
 });
   
-}
+
     
   function init() {
     // Grab a reference to the dropdown select element
